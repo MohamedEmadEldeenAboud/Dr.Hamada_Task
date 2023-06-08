@@ -1,7 +1,7 @@
 
 trees <-read.csv("G1_Allometry.csv")
 
-#View(trees)
+View(trees)
 
 # We Will Start With Data cleaning
 
