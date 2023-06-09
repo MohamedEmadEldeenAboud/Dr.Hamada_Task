@@ -64,8 +64,6 @@ MSparse
 
 tallTrees = trees [trees$heightDescribtion=="Tall", ]
 
-View(tallTrees)
-
 # Subset Only Short Trees
 
 shortTrees = trees [trees$heightDescribtion=="Short", ]
@@ -76,8 +74,6 @@ shortTrees = trees [trees$heightDescribtion=="Short", ]
 
 thickAndTallTrees = trees[trees$heightDescribtion=="Tall" & trees$dimeterDescribtion=="Thick", ]
 
-View(thickAndTallTrees)
-
 # Sort Or Order Our Data Set ascending Based On height and dimeter
 
 sortedData = trees[order(trees$height ,trees$diameter) , ]
@@ -86,21 +82,8 @@ sortedData = trees[order(trees$height ,trees$diameter) , ]
 #Get Only First 15 Rows
 headOfData <-head(trees ,15)
 
-
 #Get Only last 15 Rows
 tailOfData <-tail(trees ,15)
-
-View(tailOfData)
-
-# get Missing Values or Null Values
-
-library(mice)
-Pre.imputation <- mice(trees,
-                       m = 5,
-                       meth = c("pmm", "pmm", "pmm", "pmm","pmm", "pmm", "pmm", "pmm","pmm"),
-                       maxit = 20)
-
-trees = complete(Pre.imputation, 5)
 
 
 # Data Visualization
