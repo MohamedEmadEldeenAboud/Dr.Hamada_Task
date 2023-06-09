@@ -106,13 +106,13 @@ draw2 + geom_point(aes(color=diameter)) + stat_smooth(se=FALSE)
 
 draw3 <-ggplot(trees , aes(branchmass))
 draw3 + geom_histogram(binwidth = 8)
-draw3 + geom_histogram(fill = "orange")+ ggtitle("Tree's Branch Mass Distribution")+labs(x="Branch Mass" , y="Frequency")
+draw3 + geom_histogram(fill = "blue")+ ggtitle("Tree's Branch Mass Distribution")+labs(x="Branch Mass" , y="Frequency")
 
 # Visualize Distribution Of branchmass Using Histogram
 
 draw4 = ggplot(trees , aes(height))
 draw4 + geom_histogram(binwidth = 8)
-draw4 + geom_histogram(fill = "red")+ ggtitle("Tree's Height Distribution") 
+draw4 + geom_histogram(fill = "green")+ ggtitle("Tree's Height Distribution") 
 
 # Summarizing isDenseTree T or F To Species And Height Groups Using Bar Chart
 
