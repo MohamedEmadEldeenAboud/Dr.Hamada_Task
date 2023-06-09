@@ -3,16 +3,6 @@ trees <-read.csv("G1_Allometry.csv")
 
 View(trees)
 
-# We Will Start With Data cleaning
-
-library(mice)
-
-Pre.imputation <- mice(trees,
-                       m = 5,
-                       meth = c("pmm", "pmm", "pmm", "pmm" , "pmm"),
-                       maxit = 20)
-trees <- complete(Pre.imputation, 5)
-
 # Recoding The Height Feature To Tall And Short
 
 trees$heightDescribtion[trees$height >= 30] = "Tall"
